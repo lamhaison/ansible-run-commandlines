@@ -1,7 +1,7 @@
 Role Name
 =========
 
-If you want run some commandline on the remote server and get the result without acessing to each servers.
+If you want run some command lines on the remote servers and get the result without acessing to each servers.
 
 Requirements
 ------------
@@ -21,7 +21,7 @@ Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-```
+```ansible
 - hosts:
     - all
   become: true
