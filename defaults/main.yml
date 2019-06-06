@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-run-commandlines
+printing_stdout: true
+printing_stderr: false
+ignore_error: no

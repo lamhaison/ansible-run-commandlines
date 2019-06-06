@@ -1,0 +1,23 @@
+---
+# tasks file for ansible-run-commandlines
+
+- name: Running commandline {{ execute_command_line }}
+  shell: |
+    echo "-------------------Start of  commandlines---------------------------------"
+    echo "{{ execute_command_line }}"
+    echo "-------------------End of commandlines------------------------------------"
+
+    echo "-------------------Start of executing commandlines------------------------"
+    {{ execute_command_line}}
+    echo "-------------------Start of executing commandlines------------------------"
+  
+  register: command_result
+  ignore_errors: "{{ ignore_error }}"
+
+- name: Printing stdout
+  debug: var=command_result.stdout_lines
+  when: printing_stdout
+
+- name: Printing stderr
+  debug: var=command_result.stderr_lines
+  when: printing_stderr
