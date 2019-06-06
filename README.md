@@ -15,7 +15,7 @@ Role Variables
 
 Dependencies
 ------------
-Nothing
+ansible-galaxy install lamhaison.ansible_run_commandlines
 
 Example Playbook
 ----------------
